@@ -51,4 +51,4 @@ jobs:
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
         run: |
-          curl -X POST -H 'Content-type: application/json' -d '{"text":"Deploy concluído para: brunobordignon/brunobordignonsomativa02devops. Acesse seu repositorio para mais informações. Owners: Bruno O. Barbosa Bordignon e Marcos Alarcon"}' "${{ env.DISCORD_WEBHOOK }}"
+          curl -X POST -H 'Content-type: application/json' -d '{"content":"Deploy Realizado"}' "${{ env.DISCORD_WEBHOOK }}"
