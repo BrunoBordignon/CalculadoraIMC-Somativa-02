@@ -46,9 +46,9 @@ jobs:
       - name: Push na imagem do Docker
         run: docker push brunobordignon/brunobordignonsomativa02devops:latest
 
-      - name: Enviar a notifação para o Discord
+      - name: Enviar a notificação para o Discord
         if: github.event_name == 'pull_request' || github.event_name == 'push'
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
         run: |
-          curl -X POST -H 'Content-type: application/json' -d '{"content":"Nova notificação do GitHub brunobordignon/brunobordignonsomativa02devops: uma nova ação foi realizada!"}' "${{ env.DISCORD_WEBHOOK }}"
+          curl -X POST -H 'Content-type: application/json' -d '{"text":"Ação realizada em: brunobordignon/brunobordignonsomativa02devops"}' "${{ env.DISCORD_WEBHOOK }}"
