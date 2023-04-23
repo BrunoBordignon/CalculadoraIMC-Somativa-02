@@ -51,4 +51,4 @@ jobs:
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
         run: |
-          curl -X POST -H 'Content-type: application/json' -d '{"content":"Deploy Realizado"}' "${{ env.DISCORD_WEBHOOK }}"
+          curl -X POST -H 'Content-type: application/json' -d '{"content":"Nova notificação do GitHub brunobordignon/brunobordignonsomativa02devops: uma nova ação foi realizada!"}' "${{ env.DISCORD_WEBHOOK }}"
