@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora IMC</title>
+</head>
+<body style="padding-top: 50px; padding: 60px; text-align: center;">
+	<h1>Calculadora Indice de massa corporal</h1><hr><br/>
+	<!-- IMC = peso / altura ao quadrado.-->
+
+	<div>
+		<div>
+			<form method='post' action="/">
+				<label>Peso:</label>
+				<input type="number" name="peso" value="{{peso}}"><br/><br/>
+				<label>Altura: </label>
+				<input type="number" name="altura" value="{{altura}}"><br/><br/><br/>
+				<button type="submit">Calcular IMC</button><br/><br/>
+			</form>
+		</div>
+
+		<div>
+			<br/><p style="color: green; font-size: 40px;">IMC: {{indice}}</p><hr><br/>
+		</div>
+
+		<table border="2">
+			<tr>
+				<td>IMC</td>
+				<td>Classificação</td>
+			</tr>
+			<tr>
+				<td>Menor do que 18,5</td>
+				<td>Abaixo do peso ideal</td>
+			</tr>
+			<tr>
+				<td>Entre 18,5 e 24,9</td>
+				<td>Peso ideal</td>
+			</tr>
+			<tr>
+				<td>Entre 25,0 e 29,9</td>
+				<td>Excesso de peso</td>
+			</tr>
+			<tr>
+				<td>Entre 30,0 e 34,9</td>
+				<td>Obesidade I</td>
+			</tr>
+			<tr>
+				<td>Entre 35,0 e 39,9</td>
+				<td>Obesidade II</td>
+			</tr>
+			<tr>
+				<td>Maior ou igual a 40,0</td>
+				<td>Obesidade III</td>
+			</tr>
+		</table>
+
+	</div>	
+
+</body>
+</html>
